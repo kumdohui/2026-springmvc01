@@ -18,4 +18,6 @@ public interface ShopMapper {
     void getCartUpdate(CartVO cartVO);
     void getCartEdit(CartVO cvo);
     void getCartDelete(CartVO cvo);
+    void addShop(ShopVO shopVO);
+
 }
