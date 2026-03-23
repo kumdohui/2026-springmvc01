@@ -2,6 +2,7 @@ package org.study.myproject01.shop.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.study.myproject01.shop.mapper.ShopMapper;
 import org.study.myproject01.shop.vo.CartVO;
 import org.study.myproject01.shop.vo.ShopVO;
@@ -71,6 +72,9 @@ public class ShopServiceImpl implements ShopService {
     public void addShop(ShopVO shopVO) {
         shopMapper.addShop(shopVO);
     }
-
+    @GetMapping("joinForm")
+    public String joinForm() {
+        return "members/joinForm";
+    }
 
 }
